@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Certificate Portal</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#222}
+.container{max-width:680px;margin:60px auto;padding:20px}
+.card{background:#fff;border-radius:12px;padding:38px;box-shadow:0 5px 25px rgba(0,0,0,.09)}
+h1{margin-top:0;font-size:28px}
+h2{margin-top:28px}
+.status{display:inline-block;padding:7px 12px;border-radius:5px;background:#e8f5e9;color:#2e7d32;font-weight:bold}
+.download{display:inline-block;margin:25px 0;padding:14px 25px;background:#1565c0;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;cursor:pointer}
+.warning{margin-top:25px;padding:24px;border-left:5px solid #f9a825;background:#fff8e1}
+li{margin:10px 0}.small{color:#666;font-size:13px}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="card">
+<h1>Training Certificate Portal</h1>
+<h2>Your certificate is ready</h2>
+<p>You have successfully completed the Cybersecurity Training Program.</p>
+<p><strong>Certificate:</strong> Cybersecurity Training – Completion Certificate</p>
+<p><strong>Status:</strong> <span class="status">Ready for Download</span></p>
+
+<a class="download" href="#" onclick="simulateClick(event)">Download Certificate</a>
+
+<div id="simulation" class="warning hidden">
+<h2>⚠️ Security Awareness Exercise</h2>
+<p><strong>This was a simulated phishing attack.</strong></p>
+<p>You reached this page because you clicked a link in a simulated phishing email.</p>
+<p>Before clicking unexpected links, check:</p>
+<ul>
+<li><strong>Sender:</strong> Is the sender's address legitimate?</li>
+<li><strong>Link:</strong> Does the destination match the organization?</li>
+<li><strong>Urgency:</strong> Is the message pressuring you to act quickly?</li>
+<li><strong>Context:</strong> Were you actually expecting this certificate?</li>
+<li><strong>Request:</strong> Is the email asking for credentials or sensitive information?</li>
+</ul>
+<p><strong>Result:</strong> Simulated phishing link clicked.</p>
+<p><strong>No credentials or personal information were collected.</strong></p>
+<p><strong>Remember:</strong> Pause, inspect, and verify before you click.</p>
+</div>
+
+<p class="small">Cybersecurity Training Portal — Awareness Simulation</p>
+</div>
+</div>
+
+<script>
+function simulateClick(event){
+  event.preventDefault();
+  document.getElementById("simulation").classList.remove("hidden");
+  const button=document.querySelector(".download");
+  button.textContent="Simulation Completed";
+  button.style.pointerEvents="none";
+  button.style.opacity=".7";
+}
+</script>
+</body>
+</html>
