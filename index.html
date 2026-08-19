@@ -60,5 +60,17 @@ function simulateClick(event){
   button.style.opacity=".7";
 }
 </script>
+  <script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const trainingId = params.get("id") || "UNKNOWN";
+
+  fetch("https://script.google.com/macros/s/AKfycby4jylXFtXlsd0nM1ubdT2JU1zjoqkgSxdp2AiY6TlWYKe5WG2XDl60Y-Zi7X4H5mYJ/exec", {
+    method: "POST",
+    body: JSON.stringify({ training_id: trainingId }),
+    headers: { "Content-Type": "text/plain" } // avoids CORS preflight issues with Apps Script
+  }).catch(() => {});
+})();
+</script>
 </body>
 </html>
